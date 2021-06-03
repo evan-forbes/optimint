@@ -22,9 +22,9 @@ type DefaultBlockStore struct {
 	mtx sync.RWMutex
 }
 
-var _ BlockStore = &DefaultBlockStore{}
+var _ Store = &DefaultBlockStore{}
 
-func NewBlockStore() BlockStore {
+func NewBlockStore() Store {
 	return &DefaultBlockStore{db: NewInMemoryKVStore()}
 }
 

@@ -40,7 +40,7 @@ type Node struct {
 	mempoolIDs   *mempoolIDs
 	incomingTxCh chan *p2p.Tx
 
-	BlockStore store.BlockStore
+	BlockStore store.Store
 
 	dalc da.DataAvailabilityLayerClient
 
